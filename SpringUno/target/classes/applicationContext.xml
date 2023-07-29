@@ -34,9 +34,11 @@
 
     <!-- Inyección de dependencia  mediante un SETTER -->
     <bean id="miSecretarioEmpleado" class="es.pildoras.DI.SecretarioEmpleado">
-        <property name="informeNuevo" ref="miInforme">
+        <property name="informeNuevo" ref="miInforme"/>
 
-        </property>
+        <!-- Agregamos estas 2 lineas para una inyección de campos -->
+        <property name="email" value="secretaria@pildoras.es"/>
+        <property name="nombreEmpresa" value="Pildoras Informaticas"/>
 
     </bean>
 
