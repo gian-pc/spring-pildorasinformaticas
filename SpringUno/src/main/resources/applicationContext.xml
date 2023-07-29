@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans   
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+">
+    <!-- Para obtner un objeto de diferente tipo solo hay que modificar
+        el archivo de configuración XML. Además no tendremos que modificar
+        el código de nuestra aplicación
+    -->
+    <!--
+        <bean id="miEmpleado" class="es.pildoras.IoC.DirectorEmpleado">
+    -->
+
+    <bean id="miEmpleado" class="es.pildoras.IoC.JefeEmpleado">
+    </bean>
+
+
+</beans>
