@@ -21,7 +21,7 @@
 
 
     <!-- Configuración DI-->
-    <!-- Creación de la dependencia -->
+    <!-- Inyección de dependencia  mediante un CONSTRUCTOR -->
     <bean id="miInforme" class="es.pildoras.DI.Informe">
 
     </bean>
@@ -29,6 +29,15 @@
         <constructor-arg ref="miInforme">
 
         </constructor-arg>
+    </bean>
+
+
+    <!-- Inyección de dependencia  mediante un SETTER -->
+    <bean id="miSecretarioEmpleado" class="es.pildoras.DI.SecretarioEmpleado">
+        <property name="informeNuevo" ref="miInforme">
+
+        </property>
+
     </bean>
 
 
