@@ -8,14 +8,23 @@ import org.springframework.stereotype.Component;
 @Component("ComercialExperimentado") // Este código me permite registrar un bean. Esto reemplaza la configuración XML
 public class ComercialExperimentado implements Empleados{
 
+    @Autowired
     private CreacionInformeFinanciero nuevoInforme;
 
     // Lo que hace Spring es buscar en el proyecto a alguna clase que implemente tu interface CreacionInformeFinanciero
     // Y si la encuentra es de esa clase de donde obtiene la inyección de dependencia.
+
+    /**
     @Autowired
     public ComercialExperimentado(CreacionInformeFinanciero nuevoInforme) {
         this.nuevoInforme = nuevoInforme;
     }
+
+
+    @Autowired
+    public void setNuevoInforme(CreacionInformeFinanciero nuevoInforme) {
+        this.nuevoInforme = nuevoInforme;
+    }*/
 
     @Override
     public String getTareas() {
