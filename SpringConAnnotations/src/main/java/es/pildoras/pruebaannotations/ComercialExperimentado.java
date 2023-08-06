@@ -2,7 +2,7 @@ package es.pildoras.pruebaannotations;
 
 import org.springframework.stereotype.Component;
 
-@Component("ComercialExperimentado")
+@Component("ComercialExperimentado") // Este código me permite registrar un bean. Esto reemplaza la configuración XML
 public class ComercialExperimentado implements Empleados{
     @Override
     public String getTareas() {
