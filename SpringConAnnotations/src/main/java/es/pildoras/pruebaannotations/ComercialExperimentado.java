@@ -2,11 +2,13 @@ package es.pildoras.pruebaannotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 // Gracias a esta anotación @Component esta clase ComercialExperimentado queda registrado en el contenedor de Spring
 // y gracias a esto Spring es capaz de darnos un bean con un objeto perteneciente a esta clase
 @Component("ComercialExperimentado") // Este código me permite registrar un bean. Esto reemplaza la configuración XML
+@Scope("prototype")
 public class ComercialExperimentado implements Empleados{
 
     @Autowired

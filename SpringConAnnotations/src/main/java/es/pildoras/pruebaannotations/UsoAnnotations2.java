@@ -12,5 +12,17 @@ public class UsoAnnotations2 {
         Empleados Antonio = contexto.getBean("ComercialExperimentado", Empleados.class);
         Empleados Lucia = contexto.getBean("ComercialExperimentado", Empleados.class);
 
+        // ¿Apuntan al mismo objeto en memoria
+        if(Antonio==Lucia) {
+            System.out.println("Apuntan al mismo lugar en memoria");
+            System.out.println(Antonio + "\n" + Lucia);
+        }else{
+            System.out.println("No Apuntan al mismo lugar en memoria");
+            System.out.println(Antonio + "\n" + Lucia);
+        }
+
+        // Cerrar el contexto
+        contexto.close();
+
     }
 }
