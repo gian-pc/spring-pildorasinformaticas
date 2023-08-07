@@ -1,6 +1,7 @@
 package es.pildoras.pruebaannotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 // Gracias a esta anotación @Component esta clase ComercialExperimentado queda registrado en el contenedor de Spring
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Component;
 public class ComercialExperimentado implements Empleados{
 
     @Autowired
+    @Qualifier("informeFinancieroTrim4") // bean Id que debe utilizar
     private CreacionInformeFinanciero nuevoInforme;
 
     // Lo que hace Spring es buscar en el proyecto a alguna clase que implemente tu interface CreacionInformeFinanciero
